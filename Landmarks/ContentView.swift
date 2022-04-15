@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello SwiftUI!")
-            .padding()
+        Text("Tutle Rock")
+            .font(.title) // Command + click : User the insperctor
+            .foregroundColor(.black)
     }
 }
 

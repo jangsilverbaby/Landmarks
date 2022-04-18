@@ -9,18 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) { // Stack : 여러 뷰를 겷합하고 포함할 수 있음.
-            Text("Tutle Rock")
-                .font(.title) // Command + click : User the insperctor
-            HStack {
-                Text("Joshua Tree National Park")
-                    .font(.subheadline)
-                Spacer() // 크기를 정의하는 대신 상위 뷰의 모든 공간을 사용하도록 확장
-                Text("California")
-                    .font(.subheadline)
+        VStack {
+            MapView()
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -90)
+                .padding(.bottom, -100)
+            VStack(alignment: .leading) { // Stack : 여러 뷰를 겷합하고 포함할 수 있음.
+                Text("Tutle Rock")
+                    .font(.title) // Command + click : User the insperctor
+                HStack {
+                    Text("Joshua Tree National Park")
+                        .font(.subheadline)
+                    Spacer() // 크기를 정의하는 대신 상위 뷰의 모든 공간을 사용하도록 확장
+                    Text("California")
+                        .font(.subheadline)
+                }
+                .font(.subheadline)
+                foregroundColor(.secondary)
+                
+                Divider()
+                
+                Text("About Turtle Rock")
+                    .font(.title2)
+                Text("Descriptive text goes here.")
             }
+            .padding()
+            Spacer()
         }
-        .padding()
     }
 }
 

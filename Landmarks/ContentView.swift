@@ -15,8 +15,8 @@ struct ContentView: View {
                 .frame(height: 300)
             
             CircleImage()
-                .offset(y: -90)
-                .padding(.bottom, -100)
+                .offset(y: -130)
+                .padding(.bottom, -130)
             VStack(alignment: .leading) { // Stack : 여러 뷰를 겷합하고 포함할 수 있음.
                 Text("Tutle Rock")
                     .font(.title) // Command + click : User the insperctor
@@ -28,7 +28,7 @@ struct ContentView: View {
                         .font(.subheadline)
                 }
                 .font(.subheadline)
-                foregroundColor(.secondary)
+                .foregroundColor(.secondary)
                 
                 Divider()
                 
